@@ -6,14 +6,14 @@ typedef void CounterChangeCallback(num value);
 class Counter extends StatelessWidget {
   final CounterChangeCallback onChanged;
   Counter({
-    Key key,
-    @required num initialValue,
-    @required this.minValue,
-    @required this.maxValue,
-    @required this.onChanged,
-    @required this.decimalPlaces,
-    this.color,
-    this.textStyle,
+    required Key key,
+    required num initialValue,
+    required this.minValue,
+    required this.maxValue,
+    required this.onChanged,
+    required this.decimalPlaces,
+    required this.color,
+    required this.textStyle,
     this.step = 1,
     this.buttonSize = 25,
   })  : assert(initialValue != null),
@@ -52,7 +52,7 @@ class Counter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
-    color = color ?? themeData.accentColor;
+    color = color ?? themeData.hintColor;
     textStyle = textStyle ?? new TextStyle(
       fontSize: 20.0,
     );

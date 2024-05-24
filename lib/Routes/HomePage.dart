@@ -20,7 +20,7 @@ void main() => runApp(
     home: HomePage(),
     theme: ThemeData(
       primaryColor: Constants.greenAirbnb,
-      accentColor: Constants.redAirbnb,
+      hintColor: Constants.redAirbnb,
       scaffoldBackgroundColor: Colors.orange[400]
       )
     ),
@@ -55,7 +55,8 @@ class HomePageState extends State<HomePage> {
                 Icons.search,
                 size: 30,
               ),
-              title: Text("EXPLORER",style: TextStyle(fontSize: 11),),
+              // title: Text("EXPLORER",style: TextStyle(fontSize: 11),),
+            label: "EXPLORER"
           ),
           BottomNavigationBarItem(
               icon: Icon(
@@ -63,7 +64,8 @@ class HomePageState extends State<HomePage> {
                 //color: Colors.black,
                 size: 30,
               ),
-              title: Text("ENREGISTRES",style: TextStyle(fontSize: 11),),
+              // title: Text("ENREGISTRES",style: TextStyle(fontSize: 11),),
+            label: "ENREGISTRES"
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -71,7 +73,8 @@ class HomePageState extends State<HomePage> {
 
               size: 30,
             ),
-            title: Text("MESSAGES",style: TextStyle(fontSize: 11),),
+            // title: Text("MESSAGES",style: TextStyle(fontSize: 11),),
+            label: "MESSAGES"
           ),
           BottomNavigationBarItem(
               icon: Icon(
@@ -79,7 +82,8 @@ class HomePageState extends State<HomePage> {
 
           size: 30,
           ),
-              title: Text("PROFIL",style: TextStyle(fontSize: 11),),
+              // title: Text("PROFIL",style: TextStyle(fontSize: 11),),
+            label: "PROFILE"
           )
         ]
       ),

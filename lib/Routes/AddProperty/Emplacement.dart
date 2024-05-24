@@ -10,7 +10,7 @@ class Emplacement extends StatefulWidget {
 }
 
 class _EmplacementState extends State<Emplacement> {
-  num _defaultValue;
+  late num _defaultValue;
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +41,7 @@ class _EmplacementState extends State<Emplacement> {
                 child: MaterialButton(
                   color: Colors.white,
                   elevation: 5,
+                  onPressed: () {  },
                   child: Container(
                     margin: EdgeInsets.symmetric(horizontal: 25),
                     padding: EdgeInsets.symmetric(horizontal: 20,vertical: 15),

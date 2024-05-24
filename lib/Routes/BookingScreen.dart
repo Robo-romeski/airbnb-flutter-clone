@@ -5,7 +5,7 @@ import 'package:airbnb_clone/Model/Property.dart';
 import 'package:airbnb_clone/Widgets/custom_slider_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:date_range_picker/date_range_picker.dart' as DateRagePicker;
+
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class BookingScreen extends StatefulWidget {
@@ -49,13 +49,13 @@ class _BookingScreenState extends State<BookingScreen> {
              child: MaterialButton(
                 color:   Color(0xff3366cc),
                 onPressed: () async {
-                  final List<DateTime> picked = await DateRagePicker.showDatePicker(
+                  final List<DateTime> picked = (await showDateRangePicker(
                       context: context,
-                      initialFirstDate: new DateTime.now(),
-                      initialLastDate: (new DateTime.now()).add(new Duration(days: 7)),
+                      // initialFirstDate: new DateTime.now(),
+                      // initialLastDate: (new DateTime.now()).add(new Duration(days: 7)),
                       firstDate: new DateTime.now(),
                       lastDate: new DateTime(DateTime.now().year+1),
-                  );
+                  )) as List<DateTime>;
                   if (picked != null && picked.length == 2) {
                     print(picked);
                   }

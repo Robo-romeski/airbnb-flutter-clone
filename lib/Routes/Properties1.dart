@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Properties extends StatefulWidget {
   final Wilaya wilaya;
-  Properties({this.wilaya});
+  Properties({required this.wilaya});
   @override
   _PropertiesState createState() => _PropertiesState();
 }

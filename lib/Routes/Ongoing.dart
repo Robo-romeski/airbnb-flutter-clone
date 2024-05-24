@@ -10,9 +10,9 @@ class Ongoing extends StatefulWidget {
 }
 
 class _OngoingState extends State<Ongoing> {
-  List<SliderModel> slides = new List<SliderModel>();
+  List<SliderModel> slides = [];
 
-  int currentState;
+  late int currentState;
 
   PageController pageController = new PageController(initialPage: 0);
   @override

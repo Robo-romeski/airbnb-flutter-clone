@@ -93,8 +93,8 @@ void main()=>runApp(
               padding:  EdgeInsets.all(15),
               child: Text("Paramètres du compte".toUpperCase(),style: TextStyle(color: Colors.grey,fontSize: 15,),),
             ),
-            FlatButton(
-                    splashColor: Colors.grey,
+            TextButton(
+                    // splashColor: Colors.grey,
                     onPressed: (){
                       Navigator.push(
                         context,
@@ -126,8 +126,8 @@ void main()=>runApp(
               width: 50,
               height: 1,
             ),
-            FlatButton(
-              splashColor: Colors.grey,
+            TextButton(
+              // splashColor: Colors.grey,
               onPressed: (){},
               child: Padding(
                 padding:  EdgeInsets.all(15),
@@ -154,8 +154,8 @@ void main()=>runApp(
               width: 50,
               height: 1,
             ),
-            FlatButton(
-              splashColor: Colors.grey,
+            TextButton(
+              // splashColor: Colors.grey,
               onPressed: (){
                 Navigator.push(
                   context,
@@ -187,8 +187,8 @@ void main()=>runApp(
               width: 50,
               height: 1,
             ),
-            FlatButton(
-              splashColor: Colors.grey,
+            TextButton(
+              // splashColor: Colors.grey,
               onPressed: (){},
               child: Padding(
                 padding:  EdgeInsets.all(15),

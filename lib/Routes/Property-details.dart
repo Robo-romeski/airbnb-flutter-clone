@@ -31,7 +31,7 @@ class _PropertyDetailsState extends State<PropertyDetails> {
   Widget build(BuildContext context) {
     _pageController.addListener(() {
       setState(() {
-        _currentIndex=_pageController.page.round();
+        _currentIndex=_pageController.page!.round();
       });
     });
     return Scaffold(

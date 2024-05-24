@@ -21,7 +21,7 @@ class AddProperty extends StatefulWidget {
 }
 
 class _AddPropertyState extends State<AddProperty> {
-  ItemDropDownButtonCategory _selectedCategory;
+  late ItemDropDownButtonCategory _selectedCategory;
   @override
   Widget build(BuildContext context) {
 
@@ -52,7 +52,7 @@ class _AddPropertyState extends State<AddProperty> {
                     },
                     child: Align(
                       alignment: Alignment.topRight,
-                        child: IconButton(icon:Icon(Icons.add,color: Colors.black87,),iconSize: 30,)),
+                        child: IconButton(icon:Icon(Icons.add,color: Colors.black87,),iconSize: 30, onPressed: () {  },)),
                   ),
                   Text("2 Annonces",style: TextStyle(color:Colors.black87,fontSize: 22,fontWeight: FontWeight.bold),),
                   Text("En cours",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),

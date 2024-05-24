@@ -7,7 +7,7 @@ class Quantitatif extends StatefulWidget {
 }
 
 class _QuantitatifState extends State<Quantitatif> {
-  num _defaultValue;
+  late num _defaultValue;
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +45,7 @@ class _QuantitatifState extends State<Quantitatif> {
                       children: <Widget>[
                         Text("Cette interface reste à confirmer ,",style: TextStyle(fontSize: 15),),
                         Counter(
+                          key: Key(""),
                           minValue: 0,
                           maxValue: 10,
                           decimalPlaces: 0,
@@ -55,7 +56,7 @@ class _QuantitatifState extends State<Quantitatif> {
                             setState(() {
                               _defaultValue=value0;
                             });
-                          },
+                          }, color:Colors.white,
                         ),
                       ],
                     ),

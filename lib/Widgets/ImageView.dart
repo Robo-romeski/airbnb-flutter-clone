@@ -26,8 +26,8 @@ class _ImagePropertyState extends State<ImageProperty> {
         child: PageView.builder(
             controller: p..addListener(() {
               setState(() {
-                index=p.page.round();
-                widget._currentIndex=p.page.round();
+                index=p.page!.round();
+                widget._currentIndex=p.page!.round();
               });
             }),
             itemCount: property.images.length,

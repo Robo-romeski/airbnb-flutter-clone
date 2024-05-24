@@ -20,7 +20,7 @@ class AddProperty extends StatefulWidget {
 }
 
 class _AddPropertyState extends State<AddProperty> {
-  ItemDropDownButtonCategory _selectedCategory;
+  late ItemDropDownButtonCategory _selectedCategory;
   @override
   Widget build(BuildContext context) {
 
@@ -238,13 +238,13 @@ class _AddPropertyState extends State<AddProperty> {
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 40),
-                    child: FlatButton(
-                      color: Color(0xff3366cc),
-                      textColor: Colors.white,
-                      disabledColor: Colors.grey,
-                      disabledTextColor: Colors.black,
-                      padding: EdgeInsets.all(8.0),
-                      splashColor: Colors.blueAccent,
+                    child: TextButton(
+                      // color: Color(0xff3366cc),
+                      // textColor: Colors.white,
+                      // disabledColor: Colors.grey,
+                      // disabledTextColor: Colors.black,
+                      // padding: EdgeInsets.all(8.0),
+                      // splashColor: Colors.blueAccent,
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -282,9 +282,9 @@ class _AddPropertyState extends State<AddProperty> {
                       child: DropdownButton<ItemDropDownButtonCategory>(
                         value: _selectedCategory,
                         hint: Text("Selectionner un element"),
-                        onChanged: (ItemDropDownButtonCategory Value){
+                        onChanged: (ItemDropDownButtonCategory? Value){
                           setState(() {
-                            _selectedCategory = Value;
+                            _selectedCategory = Value!;
                           });
                         },
                         items: ItemDropDownButtonCategory.list.map((ItemDropDownButtonCategory item){
@@ -309,13 +309,13 @@ class _AddPropertyState extends State<AddProperty> {
                   )
                 ],
               ),
-              FlatButton(
-                color: Color(0xff3366cc),
-                textColor: Colors.white,
-                disabledColor: Colors.grey,
-                disabledTextColor: Colors.black,
-                padding: EdgeInsets.all(8.0),
-                splashColor: Colors.blueAccent,
+              TextButton(
+                // color: Color(0xff3366cc),
+                // textColor: Colors.white,
+                // disabledColor: Colors.grey,
+                // disabledTextColor: Colors.black,
+                // padding: EdgeInsets.all(8.0),
+                // splashColor: Colors.blueAccent,
                 onPressed: () {
                   /*...*/
                 },

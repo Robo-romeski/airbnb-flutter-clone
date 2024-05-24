@@ -56,7 +56,7 @@ void main()=>runApp(
           decoration: BoxDecoration(
               color: _selectedIndex == index ? Theme
                   .of(context)
-                  .accentColor : Color(0XFFE7EBEE),
+                  .hintColor : Color(0XFFE7EBEE),
               borderRadius: BorderRadius.circular(30)
           ),
           child: Icon(_icons[index],

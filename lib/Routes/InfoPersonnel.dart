@@ -161,7 +161,7 @@ class _infoPersonnelState extends State<InfoPersonnel> {
   }
   Future<void> _selectDate(BuildContext context) async {
     DateTime selectedDate = DateTime.now();
-    final DateTime picked = await showDatePicker(
+    final DateTime? picked = await showDatePicker(
         context: context,
         initialDate: selectedDate,
         firstDate: DateTime(1950, 1),

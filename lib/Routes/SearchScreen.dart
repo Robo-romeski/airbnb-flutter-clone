@@ -89,7 +89,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       value: _apartementSelected,
                       onChanged: (value){
                         setState(() {
-                          _apartementSelected=value;
+                          _apartementSelected=value!;
                         });
                       }),
                 ),
@@ -100,7 +100,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       value: _chambreSelected,
                       onChanged: (value){
                         setState(() {
-                          _chambreSelected=value;
+                          _chambreSelected=value!;
                         });
                       }),
                 ),
@@ -111,7 +111,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       value: _hotelSelected,
                       onChanged: (value){
                         setState(() {
-                          _hotelSelected=value;
+                          _hotelSelected=value!;
                         });
                       }),
                 ),
@@ -140,6 +140,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         children: <Widget>[
                           Text("Nombre adultes",style: TextStyle(fontSize: 15),),
                           Counter(
+                            key: Key("value"),
                             minValue: 0,
                             maxValue: 10,
                             decimalPlaces: 0,
@@ -149,7 +150,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             textStyle: TextStyle(letterSpacing: 10),
                             onChanged: (value0){
                               setState(() {
-                                _defaultValue=value0;
+                                _defaultValue=value0.toInt();
                               });
                               },
                           ),
@@ -177,6 +178,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         children: <Widget>[
                           Text("Nombre de personnes",style: TextStyle(fontSize: 12),overflow: TextOverflow.ellipsis,),
                          Counter(
+                           key: Key("value"),
                             minValue: 0,
                             maxValue: 10,
                             decimalPlaces: 0,
@@ -186,7 +188,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             textStyle: TextStyle(letterSpacing: 10),
                             onChanged: (value){
                               setState(() {
-                                _defaultValuePerson=value;
+                                _defaultValuePerson=value.toInt();
                               });
                               },
                           ),
@@ -221,6 +223,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         children: <Widget>[
                           Text("Note",style: TextStyle(fontSize: 15),),
                          Counter(
+                           key: Key("value"),
                             minValue: 1,
                             maxValue: 5,
                             decimalPlaces: 1,
@@ -230,7 +233,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             textStyle: TextStyle(letterSpacing: 0),
                             onChanged: (value1){
                               setState(() {
-                                _defaultValueNote=value1;
+                                _defaultValueNote=value1.toDouble();
                               });
                             },
                           ),

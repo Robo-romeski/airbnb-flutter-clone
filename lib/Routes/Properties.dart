@@ -28,7 +28,7 @@ class _PropertiesState extends State<Properties> {
   Widget build(BuildContext context) {
     _pageController.addListener(() {
       setState(() {
-        _currentIndex=_pageController.page.round();
+        _currentIndex=_pageController.page!.round();
       });
     });
 
@@ -59,7 +59,7 @@ class _PropertiesState extends State<Properties> {
         child: PageView.builder(
             controller: p..addListener(() {
               setState(() {
-                index=p.page.round();
+                index=p.page!.round();
               });
             }),
             itemCount: property.images.length,

@@ -6,7 +6,7 @@ class commentsWidget extends StatefulWidget {
 
 class _commentsWidgetState extends State<commentsWidget> {
   int _maxlines=3;
-  String comment;
+  late String comment;
 
   @override
   Widget build(BuildContext context) {
